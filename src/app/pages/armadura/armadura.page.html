@@ -1,0 +1,50 @@
+<app-header [titulo]="'Armaduras'" [colorFondo]="'red'"></app-header>
+<app-menu></app-menu>
+<ion-title>Contenido de Armaduras</ion-title>
+<ion-content>
+      <ion-content *ngIf="permission">
+        <ion-card class="armadura-card">
+          <ion-img class="armadura-image" [src]="'https://www.oscurossecretos.com.ar/e/uploads/pngegg.png'"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Armadura Oscura</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      
+        <ion-card class="armadura-card">
+          <ion-img class="armadura-image" [src]="'https://static1-es.millenium.gg/articles/0/46/55/0/@/248082-1-article_m-2.png'"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Armadura Elden Ring</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+        <ion-card class="armadura-card">
+            <ion-img class="armadura-image" [src]="'https://static1-es.millenium.gg/articles/0/46/55/0/@/248092-1-article_m-2.png'"></ion-img>
+            <ion-card-header>
+              <ion-card-title>Armaduras Elden Ring</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+
+          <ion-card class="armadura-card">
+            <ion-img class="armadura-image" [src]="'https://i.pinimg.com/originals/77/13/d0/7713d0591b56057f201f9a137e82c7ed.jpg'"></ion-img>
+            <ion-card-header>
+              <ion-card-title>Caballero Moderno</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+
+          <ion-card class="armadura-card">
+            <ion-img class="armadura-image" [src]="'https://cdn.pixabay.com/photo/2020/11/15/11/01/medieval-5745274_1280.png'"></ion-img>
+            <ion-card-header>
+              <ion-card-title>Medieval Caballero</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+
+          <ion-card class="armadura-card">
+            <ion-img class="armadura-image" [src]="'https://i.pinimg.com/originals/ba/2b/40/ba2b40125daf289a90e247f6e8c594ff.png'"></ion-img>
+            <ion-card-header>
+              <ion-card-title>Armadura</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+      </ion-content>
+      <ion-label>No tienes permiso para acceder a la Imagenes deseadas</ion-label>
+  </ion-content>
+<app-footer></app-footer>

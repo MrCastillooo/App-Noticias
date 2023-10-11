@@ -1,0 +1,29 @@
+<app-header [titulo]="'Computadoras'" [colorFondo]="'Green'"></app-header>
+<ion-title>Contenido de Computadoras</ion-title>
+<ion-content>
+    <ion-content *ngIf="permission">
+      <ion-card class="compu-card">
+        <img class="compu-image" src="assets/computadoras/descarga.jpeg">
+        <ion-card-header>
+          <ion-card-title>Notebooks Gamers</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+
+      <ion-card class="compu-card">
+        <img class="compu-image" src="assets/computadoras/images.jpeg">
+        <ion-card-header>
+          <ion-card-title>Computadora Personal</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+
+      <ion-card class="compu-card">
+        <img class="compu-image" src="assets/computadoras/laptop.jpeg">
+        <ion-card-header>
+          <ion-card-title>Laptop</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    
+    </ion-content>
+    <ion-label>No tienes permiso para acceder a la Imagenes deseadas</ion-label>
+</ion-content>
+<app-footer></app-footer>

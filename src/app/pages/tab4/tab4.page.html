@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+   <ion-buttons slot="start">
+    <ion-back-button text= "Atras" defaultHref="/"></ion-back-button>
+  </ion-buttons>
+
+    <ion-title>Extras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Extras</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="contacto">
+    <h2 class="titulo-contacto">Por si gusta aqui le presentamos otros intereses</h2>
+    <p class="texto-contacto">¿Tienes alguna pregunta, sugerencia o simplemente quieres compartir otro tipo de interes en nuestra increíble aplicación de diario? ¡Estamos aquí para escucharte!</p>
+  </div>
+
+  <ion-button expand="full" fill="solid" shape="round" color="primary" [routerLink]="['/armadura']">Armadura</ion-button>
+  <ion-button expand="full" fill="solid" shape="round" color="primary" [routerLink]="['/computadora']">Computadora</ion-button>
+  <ion-button expand="full" fill="solid" shape="round" color="primary" [routerLink]="['/perro']">Perro</ion-button>
+  <ion-button expand="full" fill="solid" shape="round" color="primary" [routerLink]="['/piedra']">Piedra</ion-button>
+  <ion-button expand="full" fill="solid" shape="round" color="primary" [routerLink]="['/pizarron']">Pizarron</ion-button>
+  
+</ion-content>

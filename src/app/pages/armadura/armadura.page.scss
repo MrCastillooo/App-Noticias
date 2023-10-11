@@ -1,0 +1,24 @@
+ion-content {
+    --background: #000;
+    color: #fff;
+  }
+  
+  .armadura-card {
+    background-color: #333;
+    color: #fff;
+    margin: 28px;
+    border-radius: 10px;
+  }
+  
+  .armadura-image {
+    max-height: 100%;
+    border-radius: 10px 10px 0 0; 
+  }
+  
+  ion-card-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  

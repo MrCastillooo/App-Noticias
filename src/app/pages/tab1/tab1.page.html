@@ -1,0 +1,36 @@
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button text= "Atras" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Papilo Noticias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title size="large">Papilo Noticias</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-articles
+  [articles]="articles"
+  ></app-articles>
+
+  <ion-infinite-scroll 
+    threshold="25%" 
+    position="bottom" 
+    (ionInfinite)="loadData()"
+  >
+  <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando.... Espera Pa...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+
+
+</ion-content>
