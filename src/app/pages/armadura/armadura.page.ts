@@ -7,14 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArmaduraPage implements OnInit {
 
-  permission: boolean;
+  concederPermiso: boolean = false; 
 
+  armaduras: any[] = [
+    {
+      nombre: 'Armadura Oscura',
+      imagen: 'https://www.oscurossecretos.com.ar/e/uploads/pngegg.png',
+    },
+    {
+      nombre: 'Armadura Elden Ring',
+      imagen: 'https://static1-es.millenium.gg/articles/0/46/55/0/@/248082-1-article_m-2.png',
+    },
+
+  ];
+  
   constructor() {
-    this.permission = false; // Inicializa permission en el constructor
   }
 
   ngOnInit() {
-    this.permission = true;
   }
-
 }

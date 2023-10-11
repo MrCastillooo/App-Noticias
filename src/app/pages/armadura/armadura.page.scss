@@ -21,4 +21,28 @@ ion-content {
     font-weight: bold;
     padding: 10px;
   }
+
+  .custom-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  .conceder-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .negar-button {
+    background-color: #FF5733; 
+    color: white; 
+  }
+
+  .warning-message {
+    background-color: #FF5733; /* Cambia el color de fondo a un tono de rojo para indicar una advertencia */
+    color: white; /* Cambia el color del texto a blanco para mayor contraste */
+    padding: 10px; /* Añade espacio alrededor del mensaje */
+    border-radius: 5px; /* Agrega bordes redondeados para resaltar el mensaje */
+  }
+  
   
