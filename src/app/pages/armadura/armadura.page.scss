@@ -39,10 +39,17 @@ ion-content {
   }
 
   .warning-message {
-    background-color: #FF5733; /* Cambia el color de fondo a un tono de rojo para indicar una advertencia */
-    color: white; /* Cambia el color del texto a blanco para mayor contraste */
-    padding: 10px; /* Añade espacio alrededor del mensaje */
-    border-radius: 5px; /* Agrega bordes redondeados para resaltar el mensaje */
+    background-color: #ff6b6b; /* Color de fondo rojo para indicar advertencia */
+    color: #ffffff; /* Color del texto en blanco para destacarlo en modo oscuro */
+    padding: 10px; /* Espacio interno para separar el contenido del borde */
+    border: 2px solid #ff0000; /* Borde rojo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-weight: bold; /* Texto en negrita para mayor énfasis */
   }
   
   
+  .red {
+    color: green;
+  }

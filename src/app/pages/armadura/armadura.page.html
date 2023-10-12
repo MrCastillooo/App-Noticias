@@ -27,7 +27,7 @@
     </ion-content>
 
     <div *ngIf="!concederPermiso" class="warning-message">
-      <ion-label>No tienes permiso para acceder a las imágenes deseadas</ion-label>
+      <ion-label [ngClass]="'red'">No tienes permiso para acceder a las imágenes deseadas</ion-label>
     </div>
     
 

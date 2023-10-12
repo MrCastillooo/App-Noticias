@@ -20,7 +20,7 @@ export class ArmaduraPage implements OnInit {
     },
 
   ];
-  
+
   constructor() {
   }
 
