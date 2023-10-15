@@ -5,13 +5,20 @@ describe('ComputadoraPage', () => {
   let component: ComputadoraPage;
   let fixture: ComponentFixture<ComputadoraPage>;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ComputadoraPage],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ComputadoraPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+

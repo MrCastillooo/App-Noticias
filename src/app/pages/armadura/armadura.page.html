@@ -25,9 +25,14 @@
 
     </ion-content>
 
+<<<<<<< HEAD
     <div *ngIf="!concederPermiso" class="custom-alert">
       <ion-icon name="alert-circle-outline" class="alert-icon"></ion-icon>
       <ion-label class="alert-text">No tienes permiso para acceder a las imágenes deseadas</ion-label>
+=======
+    <div *ngIf="!concederPermiso" class="warning-message">
+      <ion-label [ngClass]="'red'">No tienes permiso para acceder a las imágenes deseadas</ion-label>
+>>>>>>> f4dec770259fbd139ca9f7ec9ac6b46578d2f070
     </div>
     
     
