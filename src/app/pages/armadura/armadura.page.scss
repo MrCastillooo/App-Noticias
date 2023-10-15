@@ -42,12 +42,11 @@ ion-card-title {
     color: white; 
   }
 
-<<<<<<< HEAD
   .custom-alert {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #c41414;
+    background-color: #fe2112;
     color: white;
     padding: 16px;
     border-radius: 5px;
@@ -61,20 +60,5 @@ ion-card-title {
   
   .alert-text {
     font-size: 16px;
-=======
-  .warning-message {
-    background-color: #ff6b6b; /* Color de fondo rojo para indicar advertencia */
-    color: #ffffff; /* Color del texto en blanco para destacarlo en modo oscuro */
-    padding: 10px; /* Espacio interno para separar el contenido del borde */
-    border: 2px solid #ff0000; /* Borde rojo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center; /* Centra el texto horizontalmente */
-    font-weight: bold; /* Texto en negrita para mayor énfasis */
->>>>>>> f4dec770259fbd139ca9f7ec9ac6b46578d2f070
   }
   
-  
-  .red {
-    color: green;
-  }
