@@ -1,6 +1,5 @@
 <app-header [titulo]="'Armaduras'" [colorFondo]="'red'"></app-header>
 <app-menu></app-menu>
-<ion-title>Contenido de Armaduras</ion-title>
 <ion-content>
 
   <ion-buttons class="custom-button-container">
@@ -18,7 +17,7 @@
       </ion-card>
     
       <ion-card class="armadura-card" *ngFor="let armadura of armaduras">
-        <ion-img class="armadura-image" [src]="'https://static1-es.millenium.gg/articles/0/46/55/0/@/248082-1-article_m-2.png'"></ion-img>
+        <ion-img class="armadura-image" [src]="armadura.imagen"></ion-img>
         <ion-card-header>
           <ion-card-title>{{ armadura.nombre }}</ion-card-title>
         </ion-card-header>
@@ -26,9 +25,11 @@
 
     </ion-content>
 
-    <div *ngIf="!concederPermiso" class="warning-message">
-      <ion-label>No tienes permiso para acceder a las imágenes deseadas</ion-label>
+    <div *ngIf="!concederPermiso" class="custom-alert">
+      <ion-icon name="alert-circle-outline" class="alert-icon"></ion-icon>
+      <ion-label class="alert-text">No tienes permiso para acceder a las imágenes deseadas</ion-label>
     </div>
+    
     
 
   </ion-content>

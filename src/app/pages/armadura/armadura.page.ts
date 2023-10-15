@@ -12,11 +12,11 @@ export class ArmaduraPage implements OnInit {
   armaduras: any[] = [
     {
       nombre: 'Armadura Oscura',
-      imagen: 'https://www.oscurossecretos.com.ar/e/uploads/pngegg.png',
+      imagen: 'assets/armaduras/arm1.jpg',
     },
     {
       nombre: 'Armadura Elden Ring',
-      imagen: 'https://static1-es.millenium.gg/articles/0/46/55/0/@/248082-1-article_m-2.png',
+      imagen: 'assets/armaduras/arm2.jpg',
     },
 
   ];
