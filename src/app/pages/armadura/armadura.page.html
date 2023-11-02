@@ -27,7 +27,7 @@
 
     <div *ngIf="!concederPermiso" class="custom-alert">
       <ion-icon name="alert-circle-outline" class="alert-icon"></ion-icon>
-      <ion-label class="alert-text">No tienes permiso para acceder a las imágenes deseadas</ion-label>
+      <ion-label [ngClass]="'red'">No tienes permiso para acceder a las imágenes deseadas</ion-label>
     </div>
     
 
