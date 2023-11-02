@@ -11,18 +11,22 @@ import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
-  declarations: [               // se anotan los componentes que pertenecen a la familia
-    ArticleComponent,           // se anotan todos los modulos que necesito
-    ArticlesComponent,          // es recomedable que un modulo importe a otro
+ // se anotan los componentes que pertenecen a la familia
+  declarations: [         
+    // se anotan todos los modulos que necesito     
+    // es recomedable que un modulo importe a otro 
+    ArticleComponent,           
+    ArticlesComponent,          
     HeaderComponent,
     FooterComponent,
     MenuComponent,
   ],
   imports: [
+    // se usa para declarar componentes que seran usados posteriormente
     CommonModule,
     IonicModule
   ],
-  exports: [                    // se usa para declarar componentes que seran usados posteriormente
+  exports: [                    
     ArticlesComponent,
     HeaderComponent,
     FooterComponent,

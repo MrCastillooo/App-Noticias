@@ -28,7 +28,7 @@ export class PiedraPage implements OnInit {
   ]
 
   institutosFiltrados = this.listaInsti.filter((instituto) =>{
-    return instituto.abierto && instituto.cantidad_alumnos > 300 && instituto.carreras === 'Informatica';
+    return (instituto.abierto && instituto.cantidad_alumnos > 300 && instituto.carreras === 'Informatica') || (instituto.abierto && instituto.cantidad_alumnos < 500 && instituto.carreras === 'Ingles');
   });
 
   ngOnInit() {
