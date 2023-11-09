@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/interfaces/persona';
 
+interface Empleado {
+  nombre : string;
+  apellido : string;
+  dni: number;
+  sueldo: number;
+  estado_civil: string;
+  licencia: boolean;
+}
+
 @Component({
   selector: 'app-perro',
   templateUrl: './perro.page.html',
@@ -18,6 +27,21 @@ export class PerroPage implements OnInit {
 
               // {luego se puede cargar otros usuarios}
   ];
+
+
+  listaEmpleados: Empleado[] = [
+    {nombre: "Leandro", apellido: "Castillo", dni: 44876567, sueldo: 450, estado_civil: "soltero", licencia: true},
+    {nombre: "Juan", apellido: "Gomez", dni: 44987564, sueldo: 650, estado_civil: "casado", licencia: false},
+  ];
+  
+  empleadosFiltrados = this.listaEmpleados.filter((empleado) => {
+    return (empleado.licencia === false && empleado.sueldo >= 300 && empleado.sueldo <= 450);
+  });
+  
+  empleadosFiltrados2 = this.listaEmpleados.filter((empleado2) => {
+    return (empleado2.estado_civil === 'casado' && empleado2.licencia === true);
+  });
+
 
   constructor() { }
 
@@ -39,6 +63,8 @@ export class PerroPage implements OnInit {
 
   ngOnInit() {
     this.recorrerLista()
+    console.log(this.empleadosFiltrados);
+    console.log(this.empleadosFiltrados2);
   }
 
 }
