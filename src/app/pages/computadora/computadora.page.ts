@@ -1,14 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-interface Empleado {
-  nombre : string;
-  apellido : string;
-  dni: number;
-  sueldo: number;
-  estado_civil: string;
-  licencia: boolean;
-}
-
 @Component({
   selector: 'app-computadora',
   templateUrl: './computadora.page.html',
@@ -16,29 +7,22 @@ interface Empleado {
 })
 export class ComputadoraPage implements OnInit {
 
- permission: boolean;
+  permission: boolean;
+  imagenes: any[];
 
   constructor() {
-    this.permission = false; //Inicializa permission en el constructor
+    this.permission = false;
+    this.imagenes = [
+      { src: 'assets/computadoras/descarga.jpeg', alt: 'Galería de imágenes usando cards', title: 'Galería de imágenes usando cards' },
+      { src: 'assets/computadoras/images.jpeg', alt: 'Laptop', title: 'Laptop' },
+      { src: 'assets/computadoras/laptop.jpeg', alt: 'Computadora Personal', title: 'Computadora Personal' },
+      { src: 'assets/computadoras/compu.jpeg', alt: 'Laptop con Funcionalidades', title: 'Laptop con Funcionalidades' },
+      { src: 'assets/computadoras/setup.jpg', alt: 'PC gamers', title: 'PC gamers' },
+      { src: 'assets/computadoras/setup2.jpg', alt: 'Pc Gamers', title: 'Pc Gamers' }
+    ];
   }
-
-  listaEmpleados: Empleado[] = [
-    {nombre: "Leandro", apellido: "Castillo", dni: 44876567, sueldo: 450, estado_civil: "soltero", licencia: true},
-    {nombre: "Juan", apellido: "Gomez", dni: 44987564, sueldo: 650, estado_civil: "casado", licencia: false},
-  ];
-  
-  empleadosFiltrados = this.listaEmpleados.filter((empleado) => {
-    return (empleado.licencia === false && empleado.sueldo >= 300 && empleado.sueldo <= 450);
-  });
-  
-  empleadosFiltrados2 = this.listaEmpleados.filter((empleado2) => {
-    return (empleado2.estado_civil === 'casado' && empleado2.licencia === true);
-  });
-  
   
   ngOnInit() {
-    console.log(this.empleadosFiltrados);
-    console.log(this.empleadosFiltrados2);
     this.permission = true;
   }
 }

@@ -1,49 +1,15 @@
 <app-header [titulo]="'Computadoras'" [colorFondo]="'Green'"></app-header>
 <ion-content>
-    <ion-content *ngIf="permission">
-      <ion-card class="compu-card">
-        <img class="compu-image" src="assets/computadoras/descarga.jpeg">
-        <ion-card-header>
-          <ion-card-title>Notebooks Gamers</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-
-      <ion-card class="compu-card">
-        <img class="compu-image" src="assets/computadoras/images.jpeg">
-        <ion-card-header>
-          <ion-card-title>Computadora Personal</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-
-      <ion-card class="compu-card">
-        <img class="compu-image" src="assets/computadoras/laptop.jpeg">
-        <ion-card-header>
-          <ion-card-title>Laptop</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-
-      <ion-card class="compu-card">
-        <img class="compu-image" src="assets/computadoras/compu.jpeg">
-        <ion-card-header>
-          <ion-card-title>Laptop con Funcionalidades</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-
-      <ion-card class="compu-card">
-        <img class="compu-image" src="assets/computadoras/setup.jpg">
-        <ion-card-header>
-          <ion-card-title>PC gamers</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-
-      <ion-card class="compu-card">
-        <img class="compu-image" src="assets/computadoras/setup2.jpg">
-        <ion-card-header>
-          <ion-card-title>Pc Gamers</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-    
-    </ion-content>
-    <ion-label>No tienes permiso para acceder a la Imagenes deseadas</ion-label>
+  <ion-content *ngIf="permission; else noPermission">
+    <ion-card class="compu-card" *ngFor="let imagen of imagenes">
+      <img class="compu-image" [src]="imagen.src" alt="{{ imagen.alt }}">
+      <ion-card-header>
+        <ion-card-title>{{ imagen.title }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ion-content>
+  <ng-template #noPermission>
+    <ion-label>No tienes permiso para acceder a las imágenes deseadas</ion-label>
+  </ng-template>
 </ion-content>
 <app-footer></app-footer>

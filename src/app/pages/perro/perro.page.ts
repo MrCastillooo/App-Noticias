@@ -27,8 +27,7 @@ export class PerroPage implements OnInit {
 
               // {luego se puede cargar otros usuarios}
   ];
-
-
+  
   listaEmpleados: Empleado[] = [
     {nombre: "Leandro", apellido: "Castillo", dni: 44876567, sueldo: 450, estado_civil: "soltero", licencia: true},
     {nombre: "Juan", apellido: "Gomez", dni: 44987564, sueldo: 650, estado_civil: "casado", licencia: false},

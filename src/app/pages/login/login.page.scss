@@ -1,61 +1,63 @@
 ion-content {
-    --background: #1f1e1e;
+  --background: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+ion-item {
+  --background: #333;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  ion-input {
+    color: #fff;
   }
-  
-  ion-item {
-    --background: #1f1e1e;
-    border-radius: 10px;
-    margin-bottom: 16px;
+}
+
+ion-button {
+  --background: #3880ff;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  ion-title {
+    font-size: 2.5rem;
   }
-  
-  .header {
-    margin-top: 100px;
-    margin-bottom: 80px;
-    text-align: center;
-  
-    .subTitle {
-      color: gray;
-      font-size: 0.9rem;
-    }
-  
-    ion-title {
-      font-size: 2rem;
-    }
+  .subTitle {
+    color: #ddd;
+    font-size: 1rem;
   }
-  
-  .signupLink {
-    display: flex;
-    margin: auto;
-    flex-direction: row;
-    align-content: center;
-    position: absolute;
-    justify-content: center;
-    left: 0;
-    bottom: 0;
-    width: 80%;
-    right: 0;
-  
-    p {
-      font-size: 0.9rem;
-    }
-  
-    a {
-      text-decoration: none;
-    }
+}
+
+.signupLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  p {
+    color: #ddd;
+    font-size: 0.9rem;
   }
-  
-  .title {
-    margin-top: -258px;
+  a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
   }
-  
-  .forgotpassword {
-    display: flex;
-    justify-content: flex-end;
-  
-    a {
-      font-weight: 400;
-      font-size: 0.8rem;
-      text-decoration: none;
-    }
+}
+
+.forgotpassword {
+  display: flex;
+  justify-content: flex-end;
+  a {
+    color: #3498db;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-decoration: none;
   }
-  
+}
+

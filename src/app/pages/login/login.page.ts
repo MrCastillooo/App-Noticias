@@ -1,28 +1,55 @@
+// login.page.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/login.service'
-
+import { AuthService } from '../../services/login.service';
+import { AlertController } from '@ionic/angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-
-
 export class LoginPage {
-  email: string = '';
-  password: string = '';
+  loginForm: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private alertController: AlertController,
+    private formBuilder: FormBuilder
+  ) {
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+    });
+  }
+
+  async presentAlert(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Alerta',
+      message: message,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
 
   login() {
-    const isAuthenticated = this.authService.login(this.email, this.password);
+    if (this.loginForm.invalid) {
+      this.presentAlert('Por favor, completa todos los campos correctamente.');
+      return;
+    }
+
+    const { email, password } = this.loginForm.value;
+
+    const isAuthenticated = this.authService.login(email, password);
 
     if (isAuthenticated) {
-      this.router.navigate(['/home']); 
+      this.presentAlert('Inicio de sesión exitoso.');
+      this.router.navigate(['/home']);
     } else {
-      console.error('Error de leandro');
+      this.presentAlert('Correo electrónico o contraseña incorrectos.');
     }
   }
 }

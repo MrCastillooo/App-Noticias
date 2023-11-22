@@ -9,7 +9,6 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 
 
-
 @NgModule({
  // se anotan los componentes que pertenecen a la familia
   declarations: [         
