@@ -1,27 +1,29 @@
-.input{
-    font-size: 300;
-}
-
-ion-item{
+ion-content {
+    --background: #1f1e1e;
+  }
+  
+  ion-item {
     --background: #1f1e1e;
     border-radius: 10px;
     margin-bottom: 16px;
-}
-
-.header {
+  }
+  
+  .header {
     margin-top: 100px;
     margin-bottom: 80px;
     text-align: center;
-    .subTitle{
-        color: gray;
-        font-size: 0.9rem;
+  
+    .subTitle {
+      color: gray;
+      font-size: 0.9rem;
     }
-    title{
-        font-size: 2rem;
+  
+    ion-title {
+      font-size: 2rem;
     }
-}
-
-.signupLink {
+  }
+  
+  .signupLink {
     display: flex;
     margin: auto;
     flex-direction: row;
@@ -32,25 +34,28 @@ ion-item{
     bottom: 0;
     width: 80%;
     right: 0;
-
-    p{
-        font-size: 0.9rem;
+  
+    p {
+      font-size: 0.9rem;
     }
-    a{
-        text-decoration: none;
+  
+    a {
+      text-decoration: none;
     }
-}
-
-.title{
+  }
+  
+  .title {
     margin-top: -258px;
-}
-
-.forgotpassword {
+  }
+  
+  .forgotpassword {
     display: flex;
     justify-content: flex-end;
-    a{
-        font-weight: 400;
-        font-size: 0.8rem;
-        text-decoration: none;
+  
+    a {
+      font-weight: 400;
+      font-size: 0.8rem;
+      text-decoration: none;
     }
-}
+  }
+  
