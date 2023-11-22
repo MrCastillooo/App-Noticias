@@ -1,0 +1,34 @@
+// tab5.page.scss
+
+ion-content {
+  --background: #121212; // Fondo de la página en modo oscuro
+}
+
+ion-card {
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); // Sombra para resaltar la tarjeta
+  border-radius: 10px; // Bordes redondeados
+  background-color: #333; // Fondo de la tarjeta en modo oscuro
+}
+
+ion-card-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff; // Color del texto del encabezado en modo oscuro
+  background-color: #222; // Fondo del encabezado en modo oscuro
+  border-bottom: 1px solid #444; // Línea separadora en modo oscuro
+  border-radius: 10px 10px 0 0; // Bordes redondeados solo en la parte superior
+}
+
+ion-card-content {
+  margin-top: 10px;
+  color: #ddd; // Color del texto del contenido en modo oscuro
+  padding: 16px; // Relleno interno
+}
+
+ion-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; // Bordes redondeados solo en la parte superior
+}
+

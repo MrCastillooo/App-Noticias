@@ -1,0 +1,31 @@
+<ion-content>
+  <form [formGroup]="formulario" (ngSubmit)="mostrarAlertaAgregarComentario()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input formControlName="titulo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Comentario</ion-label>
+        <ion-textarea formControlName="comentario"></ion-textarea>
+      </ion-item>
+      <ion-item lines="none" class="file-input-container">
+        <ion-label>Adjuntar imagen</ion-label>
+        <ion-input type="file" (change)="onFileSelected($event)"></ion-input>
+      </ion-item>
+      <ion-button expand="full" type="submit">Agregar Noticia</ion-button>
+    </ion-list>
+  </form>
+
+  <!-- Mostrar todos los comentarios -->
+  <ion-card *ngFor="let comentario of comentarios; let i = index">
+    <ion-card-header>
+      {{ comentario.titulo }}
+    </ion-card-header>
+    <ion-card-content>
+      {{ comentario.comentario }}
+    </ion-card-content>
+    <ion-img [src]="comentario.imagen" *ngIf="comentario.imagen"></ion-img>
+    <ion-button expand="full" (click)="mostrarAlertaEliminarComentario(i)">Eliminar Noticia</ion-button>
+  </ion-card>
+</ion-content>
