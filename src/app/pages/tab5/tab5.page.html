@@ -1,3 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text= "Atras" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Foro de Noticias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <form [formGroup]="formulario" (ngSubmit)="mostrarAlertaAgregarComentario()">
     <ion-list>

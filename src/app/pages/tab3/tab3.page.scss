@@ -1,56 +1,56 @@
+/* En tu archivo .scss */
 
-  
-  .contacto {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #fff;
+page-contacto {
+  ion-header {
+    ion-toolbar {
+      ion-buttons {
+        ion-back-button {
+          font-size: 1.5em; /* Tamaño del botón de retroceso */
+        }
+        ion-title {
+          font-size: 1.2em; /* Tamaño del título */
+        }
+      }
+    }
   }
-  
-  .titulo-contacto {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 10px;
+
+  ion-content {
+    --background: transparent; /* Quitar el fondo azul */
+
+    .contacto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%; /* Ajustar al 100% del contenedor */
+
+      .titulo-contacto {
+        font-size: 1.8em; /* Tamaño del título principal */
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .texto-contacto {
+        font-size: 1em; /* Tamaño del texto regular */
+        margin-bottom: 15px;
+      }
+
+      .info-contacto {
+        ion-icon {
+          font-size: 1.2em; /* Tamaño de los iconos de información de contacto */
+        }
+
+        .enlace-contacto {
+          font-size: 1em; /* Tamaño del texto de contacto */
+        }
+      }
+
+      .redes-sociales {
+        ion-button {
+          font-size: 1.5em; /* Tamaño de los botones de redes sociales */
+          margin: 0 5px; /* Espaciado entre los botones */
+        }
+      }
+    }
   }
-  
-  .texto-contacto {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 20px;
-  }
-  
-  .info-contacto {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    background-color: #2b2b2b;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .info-contacto ion-icon {
-    color: #007bff;
-    font-size: 1.2rem;
-    margin-right: 10px;
-  }
-  
-  .enlace-contacto {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  .redes-sociales {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .icono-red-social {
-    font-size: 2rem;
-    color: #007bff;
-    margin: 0 10px;
-  }
-  
+}
